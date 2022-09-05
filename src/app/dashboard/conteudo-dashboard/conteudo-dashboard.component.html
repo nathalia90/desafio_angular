@@ -1,0 +1,78 @@
+<app-cabecalho></app-cabecalho>
+
+<div class="container-fluid">
+  <div class="row mx-auto" style="max-width: 1200px; justify-content:center">
+    <div class="col-md-3 mb-2">
+      <app-cartao titulo="Veículo">
+        <select
+          (change)="onSelectChange($event)"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected>Ranger</option>
+          <option>Mustang</option>
+          <option>Territory</option>
+          <option>Bronco Sport</option>
+        </select>
+      </app-cartao>
+    </div>
+    <div class="col-md-3 mb-2">
+      <app-cartao titulo="Total de Vendas">{{
+        selectedModel?.volumetotal
+      }}</app-cartao>
+    </div>
+    <div class="col-md-3 mb-2">
+      <app-cartao titulo="Conectados">{{
+        selectedModel?.connected
+      }}</app-cartao>
+    </div>
+    <div class="col-md-3 mb-2" >
+      <app-cartao titulo="Update Software">{{
+        selectedModel?.softwareUpdates
+      }}</app-cartao>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-2">
+      <img
+        class="veiculoselecionado"
+        src="assets\img\{{ selectedModel?.vehicle}}.png"
+        alt="Veículo escolhido"
+      />
+    </div>
+  </div>
+
+
+  <table class="table table-bordered">
+    <thead>
+      <tr style="background-color: #1b357e; color: whitesmoke" >
+        <th>Código - Vin</th>
+        <th>Odômetro</th>
+        <th>Nível de Combustível</th>
+        <th>Status</th>
+        <th>Lat.</th>
+        <th>Long.</th>
+      </tr>
+    </thead>
+    <thead>
+      <tr>
+        <th><input (change)="onTypeChange($event)" /></th>
+        <th> {{selectedCode?.odometer}}</th>
+        <th>{{selectedCode?.fuelLevel}}</th>
+        <th>{{selectedCode?.status}}</th>
+        <th>{{selectedCode?.lat}}</th>
+        <th>{{selectedCode?.long}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color: #1b357e">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+</div>

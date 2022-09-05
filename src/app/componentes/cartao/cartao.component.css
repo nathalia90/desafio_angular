@@ -1,0 +1,12 @@
+.cartao{
+  min-height: 90px;
+  width: 15rem;
+  border-radius: 2%;
+}
+
+.textocartao{
+  text-align: left;
+  font-size: medium;
+  font-weight: bold;
+
+}

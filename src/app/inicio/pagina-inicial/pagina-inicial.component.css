@@ -1,0 +1,7 @@
+.background {
+  background: url(src\assets\img\Ranger.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  height:30vw;
+}
